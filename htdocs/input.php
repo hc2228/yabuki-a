@@ -39,6 +39,15 @@
       <td>予算<td>
       <td> </td>
      </tr>
+     </tr>
+   <tr>
+   <td rowspan="2">今月の出費</td>
+   <td>固定費</td>
+      <td>300</td>
+    </tr>   
+    <td>変動費</td>
+      <td>　</td>
+</tr>
       </table>
 
       <input type="submit" value="送信" />
