@@ -19,8 +19,8 @@
     <tr>
       <td rowspan="2">今月の給料</td>
       <!-- セルを縦に2つ結合する -->
-      <td>時給</td>
-      <td>300</td>
+      <th>時給＜円＞</th>
+          <td><input name="hwork" type="text" /></td>
     </tr>
     <tr>
       <td>労働時間</td>
