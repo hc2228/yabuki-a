@@ -22,13 +22,13 @@
       <th>金額</th>
     </tr>
     <tr>
-      <td rowspan="2">hot</td>
+      <td rowspan="2">h今月の給料</td>
       <!-- セルを縦に2つ結合する -->
-      <td>コーヒー</td>
+      <td>時給</td>
       <td>300</td>
     </tr>
     <tr>
-      <td>紅茶</td>
+      <td>労働時間</td>
       <td>250</td>
     </tr>
    <tr>
