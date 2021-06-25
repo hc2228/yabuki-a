@@ -34,7 +34,10 @@
     <td>予定日</td>
       <td>　</td>
 </tr>
+    <tr>
       <td rowspan="1">今月の予算</td>
+      <td>予算<td>
+      <td></td>
       </table>
 
       <input type="submit" value="送信" />
