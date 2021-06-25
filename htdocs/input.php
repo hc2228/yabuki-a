@@ -16,12 +16,11 @@
         ?>
   <form method="post" action="index.html">
       <table>
-        <tr>今月の給料
+        <tr>今月の給料</tr>
           <th>時給＜円＞</th>
           <td><input name="hwork" type="text" /></td>
           <th>労働時間＜時＞</th>
           <td><input name="worktime" type="text" /></td>
-        </tr>
         <tr>貯金目標
           <th>目標金額＜円＞</th>
           <td><input name="target" type="text" /></td>
