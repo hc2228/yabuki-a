@@ -17,11 +17,6 @@
   <form method="post" action="index.html">
   <table border="1" width="300" >
     <tr>
-      <th>ice/hot</th>
-      <th>種類</th>
-      <th>金額</th>
-    </tr>
-    <tr>
       <td rowspan="2">h今月の給料</td>
       <!-- セルを縦に2つ結合する -->
       <td>時給</td>
