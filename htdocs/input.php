@@ -17,7 +17,7 @@
   <form method="post" action="index.html">
   <table border="1" width="300" >
     <tr>
-      <td rowspan="2">h今月の給料</td>
+      <td rowspan="2">今月の給料</td>
       <!-- セルを縦に2つ結合する -->
       <td>時給</td>
       <td>300</td>
@@ -27,10 +27,12 @@
       <td>250</td>
     </tr>
    <tr>
-      <td>ice</td>
-      <td>りんごジュース</td>
-      <td>200</td>
+   <td rowspan="2">貯金目標</td>
+   <td>目標金額</td>
+      <td>300</td>
     </tr>   
+    <td>予定日</td>
+      <td>　</td>
       </table>
 
       <input type="submit" value="送信" />
