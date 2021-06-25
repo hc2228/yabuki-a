@@ -23,30 +23,29 @@
           <td><input name="hwork" type="text" /></td>
     </tr>
     <tr>
-      <td>労働時間</td>
-      <td>250</td>
+    <th>労働時間＜時＞</th>
+          <td><input name="worktime" type="text" /></td>
     </tr>
    <tr>
    <td rowspan="2">貯金目標</td>
-   <td>目標金額</td>
-      <td>300</td>
+   <th>目標金額＜円＞</th>
+          <td><input name="target" type="text" /></td>
     </tr>   
-    <td>予定日</td>
-      <td>　</td>
+    <th>予定日</th>
+          <td><input name="remonth" type="text" /></td>
 </tr>
     <tr>
       <td rowspan="1">今月の予算</td>
-      <td>予算<td>
-      <td> </td>
-     </tr>
+      <th>予算</th>
+          <td><input name="inget" type="text" /></td>
      </tr>
    <tr>
    <td rowspan="2">今月の出費</td>
-   <td>固定費</td>
-      <td>300</td>
+   <th>固定費</th>
+          <td><input name="fixcost" type="text" /></td>
     </tr>   
-    <td>変動費</td>
-      <td>　</td>
+    <th>変動費</th>
+          <td><input name="varcost" type="text" /></td>
 </tr>
       </table>
 
