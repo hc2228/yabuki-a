@@ -36,15 +36,15 @@
 </tr>
     <tr>
       <td rowspan="1">今月の予算</td>
-      <th>予算</th>
+      <th>予算＜円＞</th>
           <td><input name="inget" type="text" /></td>
      </tr>
    <tr>
    <td rowspan="2">今月の出費</td>
-   <th>固定費</th>
+   <th>固定費＜円＞</th>
           <td><input name="fixcost" type="text" /></td>
     </tr>   
-    <th>変動費</th>
+    <th>変動費＜円＞</th>
           <td><input name="varcost" type="text" /></td>
 </tr>
       </table>
