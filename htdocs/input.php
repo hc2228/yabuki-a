@@ -15,33 +15,32 @@
             echo date('Y年m月d日');
         ?>
   <form method="post" action="index.html">
-      <table>
-        <tr>今月の給料</tr>
-          <th>時給＜円＞</th>
-          <td><input name="hwork" type="text" /></td>
-          <th>労働時間＜時＞</th>
-          <td><input name="worktime" type="text" /></td>
-        <tr>貯金目標
-          <th>目標金額＜円＞</th>
-          <td><input name="target" type="text" /></td>
-          <th>予定日</th>
-          <td><input name="remonth" type="text" /></td>
-        </tr>
-        <tr>今月の予算
-          <th>予算</th>
-          <td><input name="inget" type="text" /></td>
-        </tr>
-        <tr>今月の出費
-          <th>固定費</th>
-          <td><input name="fixcost" type="text" /></td>
-          <th>変動費</th>
-          <td><input name="varcost" type="text" /></td>
-        </tr>
+  <table border="1" width="300" >
+    <tr>
+      <th>ice/hot</th>
+      <th>種類</th>
+      <th>金額</th>
+    </tr>
+    <tr>
+      <td rowspan="2">hot</td>
+      <!-- セルを縦に2つ結合する -->
+      <td>コーヒー</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <td>紅茶</td>
+      <td>250</td>
+    </tr>
+   <tr>
+      <td>ice</td>
+      <td>りんごジュース</td>
+      <td>200</td>
+    </tr>   
       </table>
 
       <input type="submit" value="送信" />
       <input type="reset" value="リセット" />
-
+    
   <?php
     $hwork = $_POST['hwork'];
     $worktime = $_POST['worktime'];
