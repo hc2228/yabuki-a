@@ -13,7 +13,8 @@
       $sql = 'SELECT*FROM testtable';
       $prepare =$db->prepare($sql);
       $prepare->execute();
-      $
+      $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+      
     <div id="header">
 		  <h1 style="text-align:center;">お財布管理ツール</h1>
 		  <h2>※千葉工業大学PM学科3年の実験サイトです</h2>
