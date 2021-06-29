@@ -37,7 +37,7 @@
     <tbody>
         <tr>
             <th>給料</th>
-            <td>$z</td>
+            <td>$z+'円'</td>
         </tr>
          <tr>
             <th>出費</th>
@@ -56,7 +56,7 @@
             <td>$w</td>
         </tr>
         <tr>
-            コメントが入ります
+            <th>コメントが入ります</th>
         </tr>
     </tbody>    
 　　　　　</table>";
