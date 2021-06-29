@@ -19,16 +19,16 @@
     <tr>
       <td rowspan="2">今月の給料</td>
       <!-- セルを縦に2つ結合する -->
-      <th>時給＜円＞</th>
+      <th>時給<br>＜円＞</th>
           <td><input name="hwork" type="text" /></td>
     </tr>
     <tr>
-    <th>労働時間＜時＞</th>
+    <th>労働時間<br>＜時＞</th>
           <td><input name="worktime" type="text" /></td>
     </tr>
    <tr>
    <td rowspan="2">貯金目標</td>
-   <th>目標金額＜円＞</th>
+   <th>目標金額<br>＜円＞</th>
           <td><input name="target" type="text" /></td>
     </tr>   
     <th>予定日</th>
@@ -36,15 +36,15 @@
 </tr>
     <tr>
       <td rowspan="1">今月の予算</td>
-      <th>予算＜円＞</th>
+      <th>予算<br>＜円＞</th>
           <td><input name="inget" type="text" /></td>
      </tr>
    <tr>
    <td rowspan="2">今月の出費</td>
-   <th>固定費＜円＞</th>
+   <th>固定費<br>＜円＞</th>
           <td><input name="fixcost" type="text" /></td>
     </tr>   
-    <th>変動費＜円＞</th>
+    <th>変動費<br>＜円＞</th>
           <td><input name="varcost" type="text" /></td>
 </tr>
       </table>
