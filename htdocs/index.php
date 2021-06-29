@@ -29,7 +29,7 @@
   <table>
     <tbody>
         <tr>
-            <th>給料</th>
+            <th>給料ya</th>
             <td>テキストが入ります</td>
         </tr>
          <tr>
