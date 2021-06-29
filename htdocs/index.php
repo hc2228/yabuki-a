@@ -33,32 +33,33 @@
         $r = h($row['intD']);
         $w = h($row['intE']);
         echo 
-        "<tr>
-        <th>給料</th>
-        <td>$z</td>
-        </tr><br>
+        "<table>
+    <tbody>
         <tr>
-        <th>出費</th>
-        <td>$p</td>
-        </tr><br>
+            <th>給料</th>
+            <td>$z　'円'</td>
+        </tr>
+         <tr>
+            <th>出費</th>
+            <td>$p　'円'</td>
+        </tr>
+         <tr>
+            <th>残り予算</th>
+            <td>$s　'円'</td>
+        </tr>
         <tr>
-        <th>残り予算</th>
-        <td>$s</td>
-        </tr><br>
+            <th>残金</th>
+            <td>$r　'円'</td>
+        </tr>
         <tr>
-        <th>残金</th>
-        <td>$r</td>
-        </tr><br>
+            <th>目標まで</th>
+            <td>$w　'円'</td>
+        </tr>
         <tr>
-        <th>残り予算</th>
-        <td>$w</td>
-        </tr><br>
-        <tr>
-        <th></th>
-        <td>コメントが入ります</td>
-        </tr><br>
-        ";
-
+            コメントが入ります
+        </tr>
+    </tbody>    
+　　　　　</table>";
     }
     ?>
 <p style="text-align: center;">
