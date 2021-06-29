@@ -55,13 +55,11 @@
             <th>目標まで</th>
             <td>$w</td>
         </tr>
-        <tr>
-            <th>コメントが入ります</th>
-        </tr>
     </tbody>    
 　　　　　</table>";
     }
     ?>
+    <br>
     <table>
         <th>コメントが入ります</th>
     </table>
