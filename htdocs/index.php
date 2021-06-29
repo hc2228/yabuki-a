@@ -21,9 +21,9 @@
 	  </div>
     <div id="daily">
         
-        <?php
+        
             echo date('Y年m月d日');
-        ?>
+        
     </div>
         </body>
         <br>
@@ -60,4 +60,6 @@
 <p style="text-align: center;">
     <a href="input.php" class="btn btn-flat"><span>入力画面</span></a>
 </p>
+?>
+</body>
 </html>
