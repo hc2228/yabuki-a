@@ -40,23 +40,23 @@
         <tr>
         <th>出費</th>
         <td>$p</td>
-        </tr>
+        </tr><br>
         <tr>
         <th>残り予算</th>
         <td>$s</td>
-        </tr>
+        </tr><br>
         <tr>
         <th>残金</th>
         <td>$r</td>
-        </tr>
+        </tr><br>
         <tr>
         <th>残り予算</th>
         <td>$w</td>
-        </tr>
+        </tr><br>
         <tr>
         <th></th>
         <td>コメントが入ります</td>
-        </tr>
+        </tr><br>
         ";
 
     }
