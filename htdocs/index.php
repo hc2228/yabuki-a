@@ -62,6 +62,9 @@
 　　　　　</table>";
     }
     ?>
+    <table>
+        <th>コメントが入ります</th>
+    </table>
 <p style="text-align: center;">
     <a href="input.php" class="btn btn-flat"><span>入力画面</span></a>
 </p>
