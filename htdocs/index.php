@@ -37,7 +37,7 @@
     <tbody>
         <tr>
             <th>給料</th>
-            <td>$z円</td>
+            <td>$z</td>
         </tr>
          <tr>
             <th>出費</th>
