@@ -36,7 +36,7 @@
         "<tr>
         <th>給料</th>
         <td>$z</td>
-        </tr>
+        </tr><br>
         <tr>
         <th>出費</th>
         <td>$p</td>
