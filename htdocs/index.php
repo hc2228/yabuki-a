@@ -27,11 +27,11 @@
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
       
     foreach($result as $row){
-        $z =h($row['']);
-        $p = h($row['']);
-        $s = h($row['']);
-        $r = h($row['']);
-        $w = h($row['']);
+        $z =h($row['intA']);
+        $p = h($row['intB']);
+        $s = h($row['intC']);
+        $r = h($row['intD']);
+        $w = h($row['intE']);
         echo 
         "<tr>
         <th>給料</th>
