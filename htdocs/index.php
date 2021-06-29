@@ -37,23 +37,23 @@
     <tbody>
         <tr>
             <th>給料</th>
-            <td>$z</td>
+            <td>$z　'円'</td>
         </tr>
          <tr>
             <th>出費</th>
-            <td>$p</td>
+            <td>$p　'円'</td>
         </tr>
          <tr>
             <th>残り予算</th>
-            <td>$s</td>
+            <td>$s　'円'</td>
         </tr>
         <tr>
             <th>残金</th>
-            <td>$r</td>
+            <td>$r　'円'</td>
         </tr>
         <tr>
             <th>目標まで</th>
-            <td>$w</td>
+            <td>$w　'円'</td>
         </tr>
         <tr>
             コメントが入ります
