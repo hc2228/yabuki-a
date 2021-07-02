@@ -35,33 +35,33 @@
         $fixcost = $_POST['fixcost'];
         $varcost = $_POST['varcost'];
         
-        $z = h($row['salaary']);
-        $p = h($row['spen']);
-        $s = h($row['remai']);
-        $r = h($row['balance']);
-        $w = h($row['goal']);
+        $salaary = (int)$hwork * (int)$worktime;
+        $spen = (int)$fixcost + (int)$varcost;
+        $remai = (int)$inget - (int)$spen;
+        $balance = (int)$salaary - (int)$spen;
+        $goal = (int)$target - (int)$balance;
         echo 
         "<table>
     <tbody>
         <tr>
             <th>給料</th>
-            <td>$z</td>
+            <td>$salaary</td>
         </tr>
          <tr>
             <th>出費</th>
-            <td>$p</td>
+            <td>$spen</td>
         </tr>
          <tr>
             <th>残り予算</th>
-            <td>$s</td>
+            <td>$remai</td>
         </tr>
         <tr>
             <th>残金</th>
-            <td>$r</td>
+            <td>$balance</td>
         </tr>
         <tr>
             <th>目標まで</th>
-            <td>$w</td>
+            <td>$goal</td>
         </tr>
     </tbody>    
 　　　　　</table>";
