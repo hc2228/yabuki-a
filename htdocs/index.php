@@ -27,11 +27,19 @@
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
       
     foreach($result as $row){
-        $z =h($row['intA']);
-        $p = h($row['intB']);
-        $s = h($row['intC']);
-        $r = h($row['intD']);
-        $w = h($row['intE']);
+        $hwork = $_POST['hwork'];
+        $worktime = $_POST['worktime'];
+        $target = $_POST['target'];
+        $remonth = $_POST['remonth'];
+        $inget = $_POST['inget'];
+        $fixcost = $_POST['fixcost'];
+        $varcost = $_POST['varcost'];
+        
+        $z = h($row['salaary']);
+        $p = h($row['spen']);
+        $s = h($row['remai']);
+        $r = h($row['balance']);
+        $w = h($row['goal']);
         echo 
         "<table>
     <tbody>
