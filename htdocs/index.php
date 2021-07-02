@@ -8,49 +8,64 @@
   </head>
 
   <body>
-    <div id="header">
+  <div id="header">
 		  <h1 style="text-align:center;">お財布管理ツール</h1>
 		  <h2>※千葉工業大学PM学科3年の実験サイトです</h2>
 	  </div>
-    <div id="daily">
+      <div id="daily">
         
         <?php
             echo date('Y年m月d日');
         ?>
-    </div>
-        </body>
         <br>
-  <table>
+    </div>
+      <?php
+      require'db.php';
+      $sql = 'SELECT*FROM testtable';
+      $prepare =$db->prepare($sql);
+      $prepare->execute();
+      $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+      
+    foreach($result as $row){
+        $z =h($row['intA']);
+        $p = h($row['intB']);
+        $s = h($row['intC']);
+        $r = h($row['intD']);
+        $w = h($row['intE']);
+        echo 
+        "<table>
     <tbody>
         <tr>
             <th>給料</th>
-            <td>テキストが入ります</td>
+            <td>$z</td>
         </tr>
          <tr>
             <th>出費</th>
-            <td>テキストが入ります</td>
+            <td>$p</td>
         </tr>
          <tr>
             <th>残り予算</th>
-            <td>テキストが入ります</td>
+            <td>$s</td>
         </tr>
         <tr>
             <th>残金</th>
-            <td>テキストが入ります</td>
+            <td>$r</td>
         </tr>
         <tr>
             <th>目標まで</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th></th>
-            <td>テキストが入ります</td>
+            <td>$w</td>
         </tr>
     </tbody>    
-</table>
-  
-</div>
+　　　　　</table>";
+    }
+    ?>
+    <br>
+    <table>
+        <th>コメントが入ります</th>
+    </table>
 <p style="text-align: center;">
     <a href="input.php" class="btn btn-flat"><span>入力画面</span></a>
 </p>
+
+</body>
 </html>
