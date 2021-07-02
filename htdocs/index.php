@@ -26,22 +26,22 @@
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
       
-      $prepare->bindValue(':hwork', $hwork, PDO::PARAM_STR);
-      $prepare->bindValue(':worktime', $worktime, PDO::PARAM_STR);
-      $prepare->bindValue(':target', $target, PDO::PARAM_STR);
-      $prepare->bindValue(':remonth', $remonth, PDO::PARAM_STR);
-      $prepare->bindValue(':inget', $inget, PDO::PARAM_STR);
-      $prepare->bindValue(':fixcost', $fixcost, PDO::PARAM_STR);
-      $prepare->bindValue(':varcost', $varcost, PDO::PARAM_STR);
+      $prepare->bindValue(':intA', $hwork, PDO::PARAM_STR);
+      $prepare->bindValue(':intB', $worktime, PDO::PARAM_STR);
+      $prepare->bindValue(':intC', $target, PDO::PARAM_STR);
+      $prepare->bindValue(':intD', $remonth, PDO::PARAM_STR);
+      $prepare->bindValue(':intE', $inget, PDO::PARAM_STR);
+      $prepare->bindValue(':intF', $fixcost, PDO::PARAM_STR);
+      $prepare->bindValue(':intG', $varcost, PDO::PARAM_STR);
 
     foreach($result as $row){
-        $hwork = h($row['hwork']);
-        $worktime = h($row['worktime']);
-        $target = h($row['target']);
-        $remonth =h($row['remonth']);
-        $inget = h($row['inget']);
-        $fixcost = h($row['fixcost']);
-        $varcost = h($row['varcost']);
+        $hwork = h($row['intA']);
+        $worktime = h($row['intB']);
+        $target = h($row['intC']);
+        $remonth =h($row['intD']);
+        $inget = h($row['intE']);
+        $fixcost = h($row['intF']);
+        $varcost = h($row['intG']);
         
         $salaary = (int)$hwork * (int)$worktime;
         $spen = (int)$fixcost + (int)$varcost;
