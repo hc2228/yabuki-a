@@ -45,23 +45,23 @@
     <tbody>
         <tr>
             <th>給料</th>
-            <td>$salaary</td>
+            <td>{$salaary}</td>
         </tr>
          <tr>
             <th>出費</th>
-            <td>$spen</td>
+            <td>{$spen}</td>
         </tr>
          <tr>
             <th>残り予算</th>
-            <td>$remai</td>
+            <td>{$remai}</td>
         </tr>
         <tr>
             <th>残金</th>
-            <td>$balance</td>
+            <td>{$balance}</td>
         </tr>
         <tr>
             <th>目標まで</th>
-            <td>$goal</td>
+            <td>{$goal}</td>
         </tr>
     </tbody>    
 　　　　　</table>";
