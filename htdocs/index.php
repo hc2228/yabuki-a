@@ -26,15 +26,14 @@
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
       
-   
     foreach($result as $row){
-        $hwork = h($row['intA']);
-        $worktime = h($row['intB']);
-        $target = h($row['intC']);
-        $remonth =h($row['intD']);
-        $inget = h($row['intE']);
-        $fixcost = h($row['intF']);
-        $varcost = h($row['intG']);
+        $hwork = h($row['hwork']);
+        $worktime = h($row['worktime']);
+        $target = h($row['target']);
+        $remonth =h($row['remonth']);
+        $inget = h($row['inget']);
+        $fixcost = h($row['fixcost']);
+        $varcost = h($row['varcost']);
         
         $salaary = (int)$hwork * (int)$worktime;
         $spen = (int)$fixcost + (int)$varcost;
@@ -67,15 +66,14 @@
     </tbody>    
 　　　　　</table>";
     }
-    
+    ?>
     <br>
     <table>
-        <th>
-        if($spen<10000)
-        echo "節約できていますね";
-        </th>
+        <th><?
+        if($spen<30000)
+        echo"コメントが入ります"
+        ?></th>
     </table>
-    ?>
 <p style="text-align: center;">
     <a href="input.php" class="btn btn-flat"><span>入力画面</span></a>
 </p>
