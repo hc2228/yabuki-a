@@ -30,21 +30,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `testtable` (
   `id` int(11) NOT NULL,
   `varcharA` varchar(10) NOT NULL,
-  `intA` int(11) NOT NULL,
-  `intB` int(11) NOT NULL,
-  `intC` int(11) NOT NULL,
-  `intD` int(11) NOT NULL,
-  `intE` int(11) NOT NULL,
-  `intF` int(11) NOT NULL
+  `hwork` int(11) NOT NULL,
+  `worktime` int(11) NOT NULL,
+  `target` int(11) NOT NULL,
+  `remonth` int(11) NOT NULL,
+  `inget` int(11) NOT NULL,
+  `fixcost` int(11) NOT NULL,
+  `vercost` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `testtable`
 --
 
-INSERT INTO `testtable` (`id`, `varcharA`, `salaary`, `spen`, `remai`, 'balance', `goal`,) VALUES
-(1, '山田太郎', 72250, 20000, 30000, 52250, 200000, 147750);
-
+INSERT INTO `testtable` (`id`, `varcharA`, `hwork`, `worktime`, `target`, 'remonth', `inget`,'fixcost','vercost',) VALUES
+(GFAGA, 'FAHSR4', 850, 85, 30000, 200000, 2020/10/10, 50000, 15000, 5000);
 --
 -- ダンプしたテーブルのインデックス
 --
