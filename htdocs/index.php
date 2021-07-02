@@ -27,13 +27,13 @@
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
       
     foreach($result as $row){
-        $hwork = $_POST['hwork'];
-        $worktime = $_POST['worktime'];
-        $target = $_POST['target'];
-        $remonth = $_POST['remonth'];
-        $inget = $_POST['inget'];
-        $fixcost = $_POST['fixcost'];
-        $varcost = $_POST['varcost'];
+        $hwork = h($row['hwork']);
+        $worktime = h($row['worktime']);
+        $target = h($row['target']);
+        $remonth =h($row['remonth']);
+        $inget = h($row['inget']);
+        $fixcost = h($row['fixcost']);
+        $varcost = h($row['varcost']);
         
         $salaary = (int)$hwork * (int)$worktime;
         $spen = (int)$fixcost + (int)$varcost;
