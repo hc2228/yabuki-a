@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `testtable`;
 CREATE TABLE `testtable` (
   `id` int(11) NOT NULL,
+  `userid` varchar(10) NOT NULL,
   `varcharA` varchar(10) NOT NULL,
   `hwork` int(11) NOT NULL,
   `worktime` int(11) NOT NULL,
@@ -44,8 +45,8 @@ CREATE TABLE `testtable` (
 -- テーブルのデータのダンプ `testtable`
 --
 
-INSERT INTO `testtable` (`id`, `varcharA`, `hwork`, `worktime`, `target`, `remonth`, `inget`,`fixcost`,`vercost`,) VALUES
-(GFAGA, `FAHSR4`, 850, 85, 30000, 200000, 2020, 50000, 15000, 5000);
+INSERT INTO `testtable` (`id`,`userid`, `varcharA`, `hwork`, `worktime`, `target`, `remonth`, `inget`,`fixcost`,`vercost`,) VALUES
+(1,`GFAGA`, `FAHSR4`, 850, 85, 30000, 200000, 2020, 50000, 15000, 5000);
 
 --
 -- ダンプしたテーブルのインデックス
