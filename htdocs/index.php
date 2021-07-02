@@ -66,11 +66,15 @@
     </tbody>    
 　　　　　</table>";
     }
-    ?>
+    
     <br>
     <table>
-        <th>コメントが入ります</th>
+        <th>
+        if($spen<10000)
+        echo "節約できていますね";
+        </th>
     </table>
+    ?>
 <p style="text-align: center;">
     <a href="input.php" class="btn btn-flat"><span>入力画面</span></a>
 </p>
