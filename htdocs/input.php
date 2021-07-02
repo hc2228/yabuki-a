@@ -14,7 +14,7 @@
       <?php
             echo date('Y年m月d日');
         ?>
-  <form method="post" action="index.html">
+  <form method="post" action="index.php">
   <table border="1" width="300" >
     <tr>
       <td rowspan="2">今月の給料</td>
@@ -53,30 +53,6 @@
     <input type="submit" class="btn btn-flat" value="送信" />
     <input type="reset" class="btn btn-flat" value="リセット" />
 </p>
-    
-  <?php
-    $hwork = $_POST['hwork'];
-    $worktime = $_POST['worktime'];
-    $target = $_POST['target'];
-    $remonth = $_POST['remonth'];
-    $inget = $_POST['inget'];
-    $fixcost = $_POST['fixcost'];
-    $varcost = $_POST['varcost'];
-    
-    require 'db.php'; # 接続
-    $sql = 'insert into ?productinfo (hwork, worktime, target, remonth, inget, fixcost, vercost) values (:hwork, :worktime, :target, :remonth, :inget, :fixcost, :vercost)';
-    $prepare = $db->prepare($sql); # 準備
-    
-    $prepare->bindValue(':hwork', $hwork, PDO::PARAM_STR);
-    $prepare->bindValue(':worktime', $worktime, PDO::PARAM_STR);
-    $prepare->bindValue(':target', $target, PDO::PARAM_STR);
-    $prepare->bindValue(':remonth', $remonth, PDO::PARAM_STR);
-    $prepare->bindValue(':inget', $inget, PDO::PARAM_STR);
-    $prepare->bindValue(':fixcost', $fixcost, PDO::PARAM_STR);
-    $prepare->bindValue(':varcost', $varcost, PDO::PARAM_STR);
-
-    $prepare->execute(); # 実行
-  ?>
     
   </form>
   </body>
