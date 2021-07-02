@@ -49,8 +49,10 @@
 </tr>
       </table>
 
-      <input type="submit" value="送信" />
-      <input type="reset" value="リセット" />
+<p style="text-align: center;">   
+    <input type="submit" class="btn btn-flat" value="送信" />
+    <input type="reset" class="btn btn-flat" value="リセット" />
+</p>
     
   <?php
     $hwork = $_POST['hwork'];
