@@ -42,7 +42,7 @@ CREATE TABLE `testtable` (
 -- テーブルのデータのダンプ `testtable`
 --
 
-INSERT INTO `testtable` (`id`, `varcharA`, `intA`, `intB`, `intC`, `intD`, `intE`, `intF`) VALUES
+INSERT INTO `testtable` (`id`, `varcharA`, `salaary`, `spen`, `remai`, 'balance', `goal`,) VALUES
 (1, '山田太郎', 72250, 20000, 30000, 52250, 200000, 147750);
 
 --
