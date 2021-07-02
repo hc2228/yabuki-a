@@ -71,7 +71,7 @@
     <table>
         <th><?
         if($spen<30000)
-        echo"コメントが入ります"
+        echo"節約できてますね"
         ?></th>
     </table>
 <p style="text-align: center;">
