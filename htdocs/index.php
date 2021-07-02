@@ -26,14 +26,7 @@
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
       
-      $prepare->bindValue(':intA', $hwork, PDO::PARAM_STR);
-      $prepare->bindValue(':intB', $worktime, PDO::PARAM_STR);
-      $prepare->bindValue(':intC', $target, PDO::PARAM_STR);
-      $prepare->bindValue(':intD', $remonth, PDO::PARAM_STR);
-      $prepare->bindValue(':intE', $inget, PDO::PARAM_STR);
-      $prepare->bindValue(':intF', $fixcost, PDO::PARAM_STR);
-      $prepare->bindValue(':intG', $varcost, PDO::PARAM_STR);
-
+   
     foreach($result as $row){
         $hwork = h($row['intA']);
         $worktime = h($row['intB']);
