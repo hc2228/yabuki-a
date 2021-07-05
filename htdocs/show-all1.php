@@ -15,15 +15,18 @@ $result = $prepare->fetchAll(PDO::FETCH_ASSOC); # 結果の取得
 
 foreach ($result as $row) {
   $id       = h($row['id']);
+  $userid   = h($row['userid']);
   $varcharA = h($row['varcharA']);
-  $intA     = h($row['intA']);
-  $intB     = h($row['intB']);
-  $intC     = h($row['intC']);
-  $intD     = h($row['intD']);
-  $intE     = h($row['intE']);
-  $intF     = h($row['intF']);
+  $intA     = h($row['hwork']);
+  $intB     = h($row['worktime']);
+  $intC     = h($row['target']);
+  $intD     = h($row['remonth']);
+  $intE     = h($row['inget']);
+  $intF     = h($row['fixcost']);
+  $intG     = h($row['varcost']);
 
-  echo "{$id}, {$varcharA}, {$intA}, {$intB}, {$intC}, {$intD}, {$intE}, {$intF}<br/>";
+
+  echo "{$id},{$userid}, {$varcharA}, {$hwor}, {$worktime}, {$target}, {$remonth}, {$inget}, {$fixcost},{$varcost}<br/>";
 }
 ?>
   </body>
