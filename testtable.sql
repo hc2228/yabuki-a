@@ -35,7 +35,7 @@ CREATE TABLE `testtable` (
   `hwork` int(11) NOT NULL,
   `worktime` int(11) NOT NULL,
   `target` int(11) NOT NULL,
-  `remonth` int(11) NOT NULL,
+  `remonth` date(11) NOT NULL,
   `inget` int(11) NOT NULL,
   `fixcost` int(11) NOT NULL,
   `vercost` int(11) NOT NULL
@@ -46,7 +46,7 @@ CREATE TABLE `testtable` (
 --
 
 INSERT INTO `testtable` (`id`,`userid`, `varcharA`, `hwork`, `worktime`, `target`, `remonth`, `inget`,`fixcost`,`vercost`) VALUES
-(1, `GFAGA`, `FAHSR4`, 850, 85, 30000, 200000, 2020, 50000, 15000, 5000);
+(1, `GFAGA`, `FAHSR4`, 850, 85, 200000, 20201010, 50000, 15000, 5000);
 
 --
 -- ダンプしたテーブルのインデックス
