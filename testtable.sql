@@ -45,8 +45,8 @@ CREATE TABLE `testtable` (
 -- テーブルのデータのダンプ `testtable`
 --
 
-INSERT INTO `testtable` (`id`,`userid`, `varcharA`, `hwork`, `worktime`, `target`, `remonth`, `inget`,`fixcost`,`vercost`,) VALUES
-(1,`GFAGA`, `FAHSR4`, 850, 85, 30000, 200000, 2020, 50000, 15000, 5000);
+INSERT INTO `testtable` (`id`,`userid`, `varcharA`, `hwork`, `worktime`, `target`, `remonth`, `inget`,`fixcost`,`vercost`) VALUES
+(1, `GFAGA`, `FAHSR4`, 850, 85, 30000, 200000, 2020, 50000, 15000, 5000);
 
 --
 -- ダンプしたテーブルのインデックス
