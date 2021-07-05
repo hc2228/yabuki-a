@@ -35,6 +35,8 @@
         $fixcost = h($row['fixcost']);
         $varcost = h($row['varcost']);
         
+    echo "{$id},{$userid}, {$varcharA}, {$hwor}, {$worktime}, {$target}, {$remonth}, {$inget}, {$fixcost},{$varcost}<br/>";
+
         $salaary = (int)$hwork * (int)$worktime;
         $spen = (int)$fixcost + (int)$varcost;
         $remai = (int)$inget - (int)$spen;
@@ -63,6 +65,7 @@
             <th>目標まで</th>
             <td>{$goal}</td>
         </tr>
+        <br/>
     </tbody>    
 　　　　　</table>";
     }
