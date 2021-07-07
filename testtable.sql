@@ -27,26 +27,32 @@ SET time_zone = "+00:00";
 -- テーブルの構造 `testtable`
 --
 
-DROP TABLE IF EXISTS `testtable`;
-CREATE TABLE `testtable` (
+DROP TABLE IF EXISTS `table1`;
+CREATE TABLE `table1` (
   `id` int(11) NOT NULL,
-  `userid` varchar(10) NOT NULL,
-  `varcharA` varchar(10) NOT NULL,
+  `pass` varchar(10) NOT NULL,
   `hwork` int(11) NOT NULL,
-  `worktime` int(11) NOT NULL,
   `target` int(11) NOT NULL,
   `remonth` date(11) NOT NULL,
-  `inget` int(11) NOT NULL,
-  `fixcost` int(11) NOT NULL,
-  `vercost` int(11) NOT NULL
+  `fixcost` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DROP TABLE IF EXISTS `table2`;
+CREATE TABLE `table2` (
+  `id` int(11) NOT NULL,
+  `pass` varchar(10) NOT NULL,
+  `worktime` date(11) NOT NULL,
+  `inget` int(11) NOT NULL,
+  `vercost` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- テーブルのデータのダンプ `testtable`
 --
 
-INSERT INTO `testtable` (`id`,`userid`, `varcharA`, `hwork`, `worktime`, `target`, `remonth`, `inget`,`fixcost`,`vercost`) VALUES
-(1, `GFAGA`, `FAHSR4`, 850, 85, 200000, 20201010, 50000, 15000, 5000);
+INSERT INTO `table1` (`id`, `pass`, `hwork`, `target`, `remonth`, `fixcost`) VALUES
+(1, `GFAGA`, 850, 200000, 20201010, 15000);
+INSERT INTO `table2` (`id`, `pass`, `worktime`, `inget`,`vercost`) VALUES
+(1, `GFAGA`, 85, 50000, 5000);
 
 --
 -- ダンプしたテーブルのインデックス
@@ -55,9 +61,10 @@ INSERT INTO `testtable` (`id`,`userid`, `varcharA`, `hwork`, `worktime`, `target
 --
 -- テーブルのインデックス `testtable`
 --
-ALTER TABLE `testtable`
+ALTER TABLE `table1`
   ADD PRIMARY KEY (`id`);
-
+ALTER TABLE `table2`
+  ADD PRIMARY KEY (`id`);
 --
 -- ダンプしたテーブルの AUTO_INCREMENT
 --
@@ -65,10 +72,12 @@ ALTER TABLE `testtable`
 --
 -- テーブルの AUTO_INCREMENT `testtable`
 --
-ALTER TABLE `testtable`
+ALTER TABLE `table1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
-
+ALTER TABLE `table2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -21,7 +21,8 @@
     </div>
       <?php
       require'db.php';
-      $sql = 'SELECT*FROM testtable';
+      $sql = 'SELECT*FROM table1';
+      $sql = 'SELECT*FROM table2';
       $prepare =$db->prepare($sql);
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
@@ -35,7 +36,7 @@
         $fixcost = h($row['fixcost']);
         $varcost = h($row['varcost']);
         
-        $salaary = (int)$hwork * (int)$worktime;
+        $salary = (int)$hwork * (int)$worktime;
         $spen = (int)$fixcost + (int)$varcost;
         $remai = (int)$inget - (int)$spen;
         $balance = (int)$salaary - (int)$spen;
@@ -45,7 +46,7 @@
     <tbody>
         <tr>
             <th>給料</th>
-            <td>{$salaary}</td>
+            <td>{$salary}</td>
         </tr>
          <tr>
             <th>出費</th>
