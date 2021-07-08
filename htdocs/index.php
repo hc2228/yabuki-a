@@ -31,12 +31,13 @@
         $hwork = h($row['hwork']);
         $worktime = h($row['worktime']);
         $target = h($row['target']);
-        $remonth =h($row['remonth']);
+        $remonth = h($row['remonth']);
         $inget = h($row['inget']);
         $fixcost = h($row['fixcost']);
-        $varcost = h($row['varcost']);
         
         $salary = (int)$hwork * (int)$worktime;
+        $inget = (int)$salary;
+        $varcost = (int)$inget - 
         $spen = (int)$fixcost + (int)$varcost;
         $remai = (int)$inget - (int)$spen;
         $balance = (int)$salaary - (int)$spen;
