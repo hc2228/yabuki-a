@@ -75,6 +75,13 @@
         <th><?
         if($spen<30000)
         echo"節約できてますね"
+        if ($spen<30000) {
+        print("節約できていますね");
+        } elseif ($spen<40000) {
+        print("うーんまだいける");
+        } else{
+        print("ちょお金の使いすぎだよー！");
+        }
         ?></th>
     </table>
 <p style="text-align: center;">
