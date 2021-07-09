@@ -34,11 +34,6 @@
     <th>予定日</th>
           <td><input name="remonth" type="text" /></td>
 </tr>
-    <tr>
-      <td rowspan="1">今月の予算</td>
-      <th>予算<br>＜円＞</th>
-          <td><input name="inget" type="text" /></td>
-     </tr>
    <tr>
    <td rowspan="2">今月の出費</td>
    <th>固定費<br>＜円＞</th>
