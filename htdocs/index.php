@@ -22,22 +22,25 @@
       <?php
       require'db.php';
       $sql = 'SELECT*FROM table1';
-      $sql = 'SELECT*FROM table2';
       $prepare =$db->prepare($sql);
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
-      
+      $sql = 'SELECT*FROM table2';
+      $prepare =$db->prepare($sql);
+      $prepare->execute();
+      $result2 = $prepare->fetchAll(PDO::FETCH_ASSOC);
+
     foreach($result as $row){
         $hwork = h($row['hwork']);
-        $worktime = h($row['worktime']);
         $target = h($row['target']);
         $remonth = h($row['remonth']);
-        $inget = h($row['inget']);
         $fixcost = h($row['fixcost']);
-        
+    foreach($result2 as $row){
+        $worktime = h($row['worktime']);
+        $varcost = h($row['varcost']);
+
         $salary = (int)$hwork * (int)$worktime;
-        $inget = (int)$salary;
-        $varcost = (int)$inget - 
+        $inget = (int)$salary - (int)$fixcost; 
         $spen = (int)$fixcost + (int)$varcost;
         $remai = (int)$inget - (int)$spen;
         $balance = (int)$salaary - (int)$spen;
@@ -69,6 +72,7 @@
     </tbody>    
 　　　　　</table>";
     }
+}
     ?>
     <br>
     <table>

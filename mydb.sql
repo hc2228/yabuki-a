@@ -54,15 +54,16 @@ DROP TABLE IF EXISTS `table2`;
 CREATE TABLE `table2` (
   `id` int(11) NOT NULL,
   `month` date NOT NULL,
-  `worktime` int(11) NOT NULL
+  `worktime` int(11) NOT NULL,
+  `varcost` int(11) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `table2`
 --
 
-INSERT INTO `table2` (`id`, `month`, `worktime`) VALUES
-(1, '2020-07-01', 85);
+INSERT INTO `table2` (`id`, `month`, `worktime`,`varcost`) VALUES
+(1, '2020-07-01', 85,5000);
 
 --
 -- ダンプしたテーブルのインデックス
