@@ -73,8 +73,6 @@
     <br>
     <table>
         <th><?
-        if($spen<30000)
-        echo"節約できてますね"
         if ($spen<30000) {
         print("節約できていますね");
         } elseif ($spen<40000) {
