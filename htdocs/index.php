@@ -21,21 +21,17 @@
     </div>
       <?php
       require'db.php';
-      $sql = 'SELECT*FROM table1';
+      $sql = 'SELECT*FROM table1,table2';
       $prepare =$db->prepare($sql);
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
-      $sql2 = 'SELECT*FROM table2';
-      $prepare =$db->prepare($sql2);
-      $prepare->execute();
-      $result2 = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
     foreach($result as $row){
         $hwork = h($row['hwork']);
         $target = h($row['target']);
         $remonth = h($row['remonth']);
         $fixcost = h($row['fixcost']);
-    foreach($result2 as $row){
+
         $worktime = h($row['worktime']);
         $varcost = h($row['varcost']);
 
@@ -72,7 +68,7 @@
     </tbody>    
 　　　　　</table>";
     }
-}
+
     ?>
     <br>
     <table>
