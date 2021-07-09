@@ -20,7 +20,7 @@
         <br>
     </div>
       <?php
-      require'db.php';
+      $require'db.php';
       $sql = 'SELECT*FROM table1,table2';
       $prepare =$db->prepare($sql);
       $prepare->execute();
