@@ -21,11 +21,7 @@
     </div>
       <?php
       require'db.php';
-      $db = new PDO($dsn, $dbUser, $dbPass);
-      # プリペアドステートメントのエミュレーションを無効にする．
-      $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-      # エラー→例外
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);      $sql = 'SELECT*FROM table1,table2';
+      $sql = 'SELECT*FROM table1,table2';
       $prepare =$db->prepare($sql);
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
