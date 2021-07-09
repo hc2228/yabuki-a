@@ -25,8 +25,8 @@
       $prepare =$db->prepare($sql);
       $prepare->execute();
       $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
-      $sql = 'SELECT*FROM table2';
-      $prepare =$db->prepare($sql);
+      $sql2 = 'SELECT*FROM table2';
+      $prepare =$db->prepare($sql2);
       $prepare->execute();
       $result2 = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
