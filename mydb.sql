@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2021-07-08 15:08:28
+-- 生成日時: 2021-07-09 08:57:51
 -- サーバのバージョン： 10.4.18-MariaDB
 -- PHP のバージョン: 8.0.3
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- データベース: `mydb2`
 --
+CREATE DATABASE IF NOT EXISTS `mydb2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `mydb2`;
 
 -- --------------------------------------------------------
 
@@ -55,15 +57,15 @@ CREATE TABLE `table2` (
   `id` int(11) NOT NULL,
   `month` date NOT NULL,
   `worktime` int(11) NOT NULL,
-  `varcost` int(11) NOT NULL,
+  `varcost` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `table2`
 --
 
-INSERT INTO `table2` (`id`, `month`, `worktime`,`varcost`) VALUES
-(1, '2020-07-01', 85,5000);
+INSERT INTO `table2` (`id`, `month`, `worktime`, `varcost`) VALUES
+(1, '2020-07-01', 85, 5000);
 
 --
 -- ダンプしたテーブルのインデックス

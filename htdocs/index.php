@@ -20,6 +20,7 @@
         <br>
     </div>
       <?php
+      $db = new PDO('mysql:host=localhost;dbname=mydb','testuser','pass',array(PDO::MYSQL_ATTR_init_command => 'setnames utf8'));
       require'db.php';
       $sql = 'SELECT*FROM table1,table2';
       $prepare =$db->prepare($sql);
