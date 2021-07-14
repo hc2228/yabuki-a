@@ -21,26 +21,19 @@
     </div>
       <?php
       require'db.php';
-      $sql = 'SELECT*FROM table1,table2';
-      $prepare =$db->prepare($sql);
-      $prepare->execute();
-      $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach($result as $row){
-        $hwork = h($row['hwork']);
-        $target = h($row['target']);
-        $remonth = h($row['remonth']);
-        $fixcost = h($row['fixcost']);
+      $num = 1; //ログインしたことを過程
 
-        $worktime = h($row['worktime']);
-        $varcost = h($row['varcost']);
+      $sql = "select table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num";
+      $salary = $db->querySingle($sql);
+      $sql = "select $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id";
+      $inget = $db->querySingle($sql);
+      $sql = "select table1.fixcost * table2.varcost as foo from table1,table2 where table1.id=table2.id";
+      $spen = $db->querySingle($sql);
+      $balance = (int)$salary * (int)$spen;
+      $sql = "select table1.target * $balance as foo from table1,table2 where table1.id=table2.id";
+      $goal = $db->querySingle($sql);
 
-        $salary = (int)$hwork * (int)$worktime;
-        $inget = (int)$salary - (int)$fixcost; 
-        $spen = (int)$fixcost + (int)$varcost;
-        $remai = (int)$inget - (int)$spen;
-        $balance = (int)$salaary - (int)$spen;
-        $goal = (int)$target - (int)$balance;
         echo 
         "<table>
     <tbody>
@@ -51,10 +44,6 @@
          <tr>
             <th>出費</th>
             <td>{$spen}</td>
-        </tr>
-         <tr>
-            <th>残り予算</th>
-            <td>{$remai}</td>
         </tr>
         <tr>
             <th>残金</th>
@@ -67,23 +56,24 @@
         <br/>
     </tbody>    
 　　　　　</table>";
-    }
+
 
     ?>
     <br>
     <table>
         <th><?
-        if ($spen<30000) {
-        print("節約できていますね");
-        } elseif ($spen<40000) {
-        print("うーんまだいける");
-        } else{
-        print("ちょお金の使いすぎだよー！");
-        }
+         if ($spen<30000) {
+            print("節約できていますね！えらい！！");
+            } elseif ($spen<40000) {
+            print("うーんまだ大丈夫！．．．かも！");
+            } else{
+            print("お金の使いすぎだよー！いいの！？");
+            }
         ?></th>
     </table>
 <p style="text-align: center;">
-    <a href="input.php" class="btn btn-flat"><span>入力画面</span></a>
+    <a href="input1.php" class="btn btn-flat"><span>月毎の入力はこちら</span></a>
+    <a href="input2.php" class="btn btn-flat"><span>今日の給料などはこちら</span></a>
 </p>
 
 </body>

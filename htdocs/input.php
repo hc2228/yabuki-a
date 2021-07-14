@@ -13,6 +13,7 @@
    </div>
       <?php
             echo date('Y年m月d日');
+            $date = date("m"); //上の日付と同じ日を入れたい
         ?>
   <form method="post" action="index.php">
   <table border="1" width="300" >
@@ -20,11 +21,11 @@
       <td rowspan="2">今月の給料</td>
       <!-- セルを縦に2つ結合する -->
       <th>時給<br>＜円＞</th>
-          <td><input name="hwork" type="text" /></td>
+          <td><input name="hwork" type="text" /></td> <!--すでにあるデータをだしておきたい-->
     </tr>
     <tr>
     <th>労働時間<br>＜時＞</th>
-          <td><input name="worktime" type="text" /></td>
+          <td><input name="worktime" type="text" /></td>  <!--↑のはページ別なら関係なし-->
     </tr>
    <tr>
    <td rowspan="2">貯金目標</td>
