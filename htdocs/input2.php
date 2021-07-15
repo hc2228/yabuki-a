@@ -8,12 +8,11 @@
   </head>
   <body>
   <div id="header">
-    <h1 style="text-align:center;">情報を入力してください</h1>
+    <h1 style="text-align:center;">今日の給料と使った金額を入れてください</h1>
     <h2>※千葉工業大学PM学科3年の実験サイトです</h2>
    </div>
       <?php
             echo date('Y年m月d日');
-            $date = date("m"); //上の日付と同じ日を入れたい
         ?>
   <form method="post" action="index.php">
   <table border="1" width="300" >

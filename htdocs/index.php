@@ -20,18 +20,18 @@
         <br>
     </div>
       <?php
-      require'db.php';
+      require'db.php'; 
 
       $num = 1; //ログインしたことを過程
 
-      $sql = "select table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num";
+      $sql = "SELECT table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num";
       $salary = $db->querySingle($sql);
-      $sql = "select $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id=$num";
+      $sql = "SELECT $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id";
       $inget = $db->querySingle($sql);
-      $sql = "select table1.fixcost * table2.varcost as foo from table1,table2 where table1.id=table2.id=$num";
+      $sql = "SELECT table1.fixcost * table2.varcost as foo from table1,table2 where table1.id=table2.id";
       $spen = $db->querySingle($sql);
       $balance = (int)$salary * (int)$spen;
-      $sql = "select table1.target * $balance as foo from table1,table2 where table1.id=table2.id=$num";
+      $sql = "SELECT table1.target * $balance as foo from table1,table2 where table1.id=table2.id";
       $goal = $db->querySingle($sql);
 
         echo 
