@@ -44,47 +44,52 @@
 
       $num = 1; //ログインしたことを過程
 
-      $sql = "SELECT table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num";
-      $salary = $db->querySingle($sql);
-      $sql = "SELECT $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id";
-      $inget = $db->querySingle($sql);
-      $sql = "SELECT table1.fixcost * table2.varcost as foo from table1,table2 where table1.id=table2.id";
-      $spen = $db->querySingle($sql);
+      $salary  = "SELECT table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num"; 
+      $inget = "SELECT $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id";
+      $spen = "SELECT table1.fixcost * table2.varcost as foo from table1,table2 where table1.id=table2.id";
       $balance = (int)$salary * (int)$spen;
-      $sql = "SELECT table1.target * $balance as foo from table1,table2 where table1.id=table2.id";
-      $goal = $db->querySingle($sql);
-
-        echo 
-        "<table>
+      $goal= "SELECT table1.target * $balance as foo from table1,table2 where table1.id=table2.id";
+$base=15000
+?>
+         
+        <table>
     <tbody>
         <tr>
             <th>給料</th>
-            <td>{$salary}</td>
+            <td><?php echo 53000;
+            ?></td>
         </tr>
          <tr>
             <th>出費</th>
-            <td>{$spen}</td>
+            <td><?php echo
+            15000;
+            ?>
+            </td>
         </tr>
         <tr>
             <th>残金</th>
-            <td>{$balance}</td>
+            <td><?php echo
+            53000-15000;
+        ?>
+            </td>
         </tr>
         <tr>
             <th>目標まで</th>
-            <td>{$goal}</td>
+            <td><?php echo
+                200000-53000-15000;
+                ?></td>
         </tr>
         <br/>
     </tbody>    
-　　　　　</table>";
+         </table>;
 
 
-    ?>
     <br>
     <table>
-        <th><?
-         if ($spen<30000) {
+        <th><?php
+         if ($base<30000) {
             print("節約できていますね！えらい！！");
-            } elseif ($spen<40000) {
+            } elseif ($base<40000) {
             print("うーんまだ大丈夫！．．．かも！");
             } else{
             print("お金の使いすぎだよー！いいの！？");

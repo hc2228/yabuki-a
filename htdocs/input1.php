@@ -18,23 +18,23 @@
   <form method="post" action="index.php">
   <table border="1" width="300" >
     <tr>
-      <td rowspan="2">今月の給料</td>
+      <td rowspan="2">給料</td>
       <!-- セルを縦に2つ結合する -->
-      <th>時給<br>＜円＞</th>
-          <td><input name="hwork" type="text" /></td> <!--すでにあるデータをだしておきたい-->
+      <th>時給</th>
+          <td><input name="hwork" type="text" /><?php echo "850円"?></td> <!--すでにあるデータをだしておきたい-->
     </tr>
     
    <tr>
-   <td rowspan="2">貯金目標</td>
-   <th>目標金額<br>＜円＞</th>
+   <td rowspan="2">貯金目標金額<br>
+  予定月
+  </td>
           <td><input name="target" type="text" /></td>
     </tr>   
-    <th>予定日</th>
+    <td rowspan="2"><br>支出</td>
           <td><input name="remonth" type="text" /></td>
-</tr>
+
    <tr>
-   <td rowspan="2">今月の出費</td>
-   <th>固定費<br>＜円＞</th>
+   <td rowspan="2">出費(固定費</td>
           <td><input name="fixcost" type="text" /></td>
     </tr>   
     
