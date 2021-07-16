@@ -20,6 +20,26 @@
         <br>
     </div>
       <?php
+
+    $dsn = 'mysql:dbname=mydb;host=localhost';
+    $user = 'testuser';
+    $password = 'password';
+
+    try{
+    $dbh = new PDO($dsn, $user, $password);
+
+    print('<br>');
+
+    if ($dbh == null){
+        print('接続に失敗しました。<br>');
+    }else{
+        print('接続に成功しました。<br>');
+    }
+    }catch (PDOException $e){
+    print('Error:'.$e->getMessage());
+    die();
+    }
+    //$db = null;
      
      $num = 1; //ログインしたことを過程
     //給料
