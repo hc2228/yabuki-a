@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2021-07-16 03:56:29
+-- 生成日時: 2021-07-16 06:12:38
 -- サーバのバージョン： 10.4.18-MariaDB
 -- PHP のバージョン: 8.0.3
 
@@ -34,16 +34,17 @@ CREATE TABLE `table1` (
   `id` int(11) NOT NULL,
   `month` date NOT NULL,
   `varcost` int(11) NOT NULL,
-  `hwork` int(11) NOT NULL
+  `hwork` int(11) NOT NULL,
+  `userid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `table1`
 --
 
-INSERT INTO `table1` (`id`, `month`, `varcost`, `hwork`) VALUES
-(1, '2021-06-01', 200, 1000),
-(2, '2021-06-02', 0, 850);
+INSERT INTO `table1` (`id`, `month`, `varcost`, `hwork`, `userid`) VALUES
+(1, '2021-06-01', 200, 1000, 1),
+(2, '2021-06-02', 0, 850, 2);
 
 -- --------------------------------------------------------
 
@@ -58,16 +59,17 @@ CREATE TABLE `table2` (
   `target` int(11) NOT NULL,
   `remonth` date NOT NULL,
   `fixcost` int(11) NOT NULL,
-  `worktime` int(11) NOT NULL
+  `worktime` int(11) NOT NULL,
+  `userid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `table2`
 --
 
-INSERT INTO `table2` (`id`, `password`, `target`, `remonth`, `fixcost`, `worktime`) VALUES
-(1, 'aaa', 200000, '2021-10-01', 15000, 53),
-(2, 'bbb', 100000, '2021-12-01', 10000, 16);
+INSERT INTO `table2` (`id`, `password`, `target`, `remonth`, `fixcost`, `worktime`, `userid`) VALUES
+(1, 'aaa', 200000, '2021-10-01', 15000, 53, 1),
+(2, 'bbb', 100000, '2021-12-01', 10000, 16, 2);
 
 --
 -- ダンプしたテーブルのインデックス
