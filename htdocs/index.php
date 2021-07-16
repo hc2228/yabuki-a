@@ -20,42 +20,68 @@
         <br>
     </div>
       <?php
-      $dsn = 'mysql:dbname=mydb;host=localhost';
-      $user = 'testuser';
-      $password = 'password';
+     
+     $num = 1; //ログインしたことを過程
+    //給料
+      require('db.php');   
+      $sql = 'SELECT table1.hwork FROM table1 where userid='.$num;
+      $prepare =$db->prepare($sql);
+      $prepare->execute();
+      $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+
+      $a = 0;
+     foreach($result as $row){
+         $a=$a+h($row['hwork']);
+     }
+     
+     $sql = 'SELECT*FROM table2 where userid='.$num;
+     $prepare =$db->prepare($sql);
+     $prepare->execute();
+     $result = $prepare->fetchALL(PDO::FETCH_ASSOC);
+
+     foreach($result as $row){
+        $salary=h($row['worktime']*$a);
+    }
+     //
+    $sql = 'SELECT*FROM table2 where userid='.$num;
+    $prepare =$db->prepare($sql);
+    $prepare->execute();
+    $result = $prepare->fetchALL(PDO::FETCH_ASSOC);
+
+    foreach($result as $row){
+       $inget=h($salary-$row['fixcost']);
+   }
+
+   $sql = 'SELECT table1.varcost FROM table1 where userid='.$num;
+   $prepare =$db->prepare($sql);
+   $prepare->execute();
+   $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+
+   $b = 0;
+  foreach($result as $row){
+      $b=$b+h($row['varcost']);
+  }
+   $sql = 'SELECT*FROM table2 where userid='.$num;
+   $prepare =$db->prepare($sql);
+   $prepare->execute();
+   $result = $prepare->fetchALL(PDO::FETCH_ASSOC);
+
+    foreach($result as $row){
+      $spen=h($row['fixcost']+$b);
+  }
+    //残金
+    $balance = (int)$salary - (int)$spen;
+    //目標まで
+    $sql = 'SELECT*FROM table2 where userid='.$num;
+    $prepare =$db->prepare($sql);
+    $prepare->execute();
+    $result = $prepare->fetchALL(PDO::FETCH_ASSOC);
+
+     foreach($result as $row){
+     $goal=h($row['target']-$balance);
+ }
+
       
-      try{
-          $dbh = new PDO($dsn, $user, $password);
-      
-          print('<br>');
-      
-          if ($dbh == null){
-              print('接続に失敗しました。<br>');
-          }else{
-              print('接続に成功しました。<br>');
-          }
-      }catch (PDOException $e){
-          print('Error:'.$e->getMessage());
-          die();
-      }
-
-      require'db.php'; 
-
-      $num = 1; //ログインしたことを過程
-
-      $sql = "select id,sum(varcost*work) as foo from table1 group by id";
-      $salary = $db->querySingle($sql);
-
-      $sql = "SELECT table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num";
-      $salary = $db->querySingle($sql);
-      $sql = "SELECT $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id";
-      $inget = $db->querySingle($sql);
-      $sql = "SELECT table1.fixcost * table2.varcost as foo from table1,table2 where table1.id=table2.id";
-      $spen = $db->querySingle($sql);
-      $balance = (int)$salary * (int)$spen;
-      $sql = "SELECT table1.target * $balance as foo from table1,table2 where table1.id=table2.id";
-      $goal = $db->querySingle($sql);
-
         echo 
         "<table>
     <tbody>
@@ -77,7 +103,18 @@
         </tr>
         <br/>
     </tbody>    
-　　　　　</table>";
+　　　　　</table>
+        <br/>
+        <br/>";
+
+    if ($spen<30000) {
+        echo "<table><tbody><th>節約できていますね！えらい！！</th></tbody></table>";
+        } elseif ($spen<40000) {
+        echo "<table><tbody><th></th>うーんまだ大丈夫！．．．かも！</tbody></table>";
+        } else{
+        echo "<table><tbody><th>お金の使いすぎだよー！いいの！？</th></tbody></table>";
+        }
+
 
 
     ?>
