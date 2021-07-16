@@ -17,7 +17,7 @@ $dbName = isset($_SERVER['MYSQL_DB'])       ? $_SERVER['MYSQL_DB']       : 'mydb
 $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 
 try {
-  $db = new PDO($dsn, $dbUser, $dbPass);
+  $db = new PDO($dsn, $dbUser, );
   # プリペアドステートメントのエミュレーションを無効にする．
   $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
   # エラー→例外
