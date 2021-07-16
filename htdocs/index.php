@@ -43,6 +43,9 @@
 
       $num = 1; //ログインしたことを過程
 
+      $sql = "select id,sum(varcost*work) as foo from table1 group by id";
+      $salary = $db->querySingle($sql);
+
       $sql = "SELECT table1.hwork * table2.worktime as foo from table1,table2 where table1.id=table2.id=$num";
       $salary = $db->querySingle($sql);
       $sql = "SELECT $salary - table1.fixcost as foo from table1,table2 where table1.id=table2.id";
