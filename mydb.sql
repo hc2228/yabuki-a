@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2021-07-16 03:51:31
--- サーバのバージョン： 10.4.20-MariaDB
--- PHP のバージョン: 8.0.8
+-- 生成日時: 2021-07-16 03:56:29
+-- サーバのバージョン： 10.4.18-MariaDB
+-- PHP のバージョン: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- データベース: `mydb`
 --
+CREATE DATABASE IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `mydb`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- テーブルの構造 `table1`
 --
 
+DROP TABLE IF EXISTS `table1`;
 CREATE TABLE `table1` (
   `id` int(11) NOT NULL,
   `month` date NOT NULL,
@@ -48,6 +51,7 @@ INSERT INTO `table1` (`id`, `month`, `varcost`, `hwork`) VALUES
 -- テーブルの構造 `table2`
 --
 
+DROP TABLE IF EXISTS `table2`;
 CREATE TABLE `table2` (
   `id` int(11) NOT NULL,
   `password` varchar(10) NOT NULL,
