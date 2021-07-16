@@ -38,7 +38,6 @@
           print('Error:'.$e->getMessage());
           die();
       }
-      $dbh = null;
 
       require'db.php'; 
 
