@@ -22,7 +22,7 @@
       <?php
 
     $dsn = 'mysql:dbname=mydb;host=localhost';
-    $user = 'test';
+    $user = 'testuser';
     $password = 'password';
 
     try{
