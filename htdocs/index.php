@@ -20,7 +20,7 @@
         <br>
     </div>
       <?php
-      $dsn = 'mysql:dbname=mydb2;host=localhost';
+      $dsn = 'mysql:dbname=mydb;host=localhost';
       $user = 'testuser';
       $password = 'password';
       
